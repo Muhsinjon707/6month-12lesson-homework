@@ -7,6 +7,7 @@ import About from './pages/About'
 import Products from "./pages/Products"
 import Cart from "./pages/Cart"
 import Error from "./pages/Error"
+import ProductDetails from './pages/ProductDetails'
 
 function App() {
     return (
@@ -29,6 +30,13 @@ function App() {
                         <Products />
                     </MainLayout>
                 } />
+
+                <Route path="/products/:id" element={
+                    <MainLayout>
+                        <ProductDetails />
+                    </MainLayout>
+                } />
+
 
                 <Route path="/cart" element={
                     <MainLayout>
